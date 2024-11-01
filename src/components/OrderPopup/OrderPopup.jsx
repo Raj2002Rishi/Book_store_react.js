@@ -2,22 +2,34 @@ import React, { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
 const OrderPopup = ({ orderPopup, setOrderPopup }) => {
-  // State hooks for each input field
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
 
-  // Function to handle order submission
-  const handleOrder = () => {
-    // Log the order details or handle them as needed
-    console.log("Order Details:", { name, email, address });
-    
-    // Reset the input fields (optional)
-    setName("");
-    setEmail("");
-    setAddress("");
+  const handleOrder = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, address }),
+      });
 
-    // Close the popup
+      if (response.ok) {
+        setMessage("Order saved successfully!");
+        setName("");
+        setEmail("");
+        setAddress("");
+      } else {
+        setMessage("Failed to save order.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("An error occurred while saving the order.");
+    }
+
     setOrderPopup(false);
   };
 
@@ -26,7 +38,6 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
       {orderPopup && (
         <div className="h-screen w-screen fixed top-0 left-0 bg-black/50 z-50 backdrop-blur-sm">
           <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 shadow-md bg-white dark:bg-gray-900 rounded-md duration-200 w-[300px]">
-            {/* Header */}
             <div className="flex items-center justify-between">
               <h1>Order Your Book</h1>
               <IoCloseOutline
@@ -34,7 +45,6 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
                 onClick={() => setOrderPopup(false)}
               />
             </div>
-            {/* Body */}
             <div className="mt-4">
               <input
                 type="text"
@@ -65,6 +75,7 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
                   Order Now
                 </button>
               </div>
+              {message && <p>{message}</p>}
             </div>
           </div>
         </div>
