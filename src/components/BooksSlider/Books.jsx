@@ -54,8 +54,7 @@ const Books = () => {
             </p>
             <h1 className="text-3xl font-bold">Top Books</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+            Explore the must-read titles that are making waves! Find your next favorite book among our top picks!
             </p>
           </div>
 

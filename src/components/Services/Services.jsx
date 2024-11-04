@@ -10,14 +10,14 @@ const ServicesData = [
     img: Img1,
     title: "His Life",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Journey Through Life chronicles the inspiring journey of mr.Deo, showcasing their triumphs, challenges, and the lessons learned along the way.",
   },
   {
     id: 2,
     img: Img2,
     title: "Who's there",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This memoir captures the essence of Martine Jhon's life, revealing the resilience and passion that fueled their extraordinary journey."
   },
   {
     id: 3,
@@ -40,8 +40,7 @@ const Services = ({ handleOrderPopup }) => {
             </p>
             <h1 className="text-3xl font-bold">Best Books</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+            Check out the top-rated books that readers can’t get enough of! Dive into our bestsellers today
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">

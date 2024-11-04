@@ -11,21 +11,22 @@ import footerLogo from "../../assets/website/logo.png";
 const FooterLinks = [
   {
     title: "Home",
-    link: "/#",
+    link: "/#home",   // Ensure this section has `id="home"`
   },
   {
     title: "About",
-    link: "/#about",
+    link: "/#about",  // Ensure this section has `id="about"`
   },
   {
     title: "Contact",
-    link: "/#contact",
+    link: "/#contact", // Ensure this section has `id="contact"`
   },
   {
     title: "Blog",
-    link: "/#blog",
+    link: "/#blog",   // Ensure this section has `id="blog"`
   },
 ];
+
 const Footer = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-950">
@@ -38,17 +39,17 @@ const Footer = () => {
               Books Store
             </h1>
             <p className="">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus, voluptate.{" "}
+Stay connected with us! Sign up for our newsletter to receive updates on new arrivals, author events, exclusive discounts, and personalized recommendations. 
+Be the first to hear about special sales, book clubs, and exciting literary events!.{" "}
             </p>
             <br />
             <div className="flex items-center gap-3">
               <FaLocationArrow />
-              <p>Noida, Uttar Pradesh</p>
+              <p>Lovely professional university, Punjab</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
-              <p>+91 123456789</p>
+              <p>+91 6200512589</p>
             </div>
             {/* Social Handle */}
             <div className="flex items-center gap-3 mt-6">
@@ -115,7 +116,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="text-center py-10 border-t-2 border-gray-300/50">
-            @copyright 2024 All rights reserved || Made with ❤️ by Dilshad
+            @copyright 2024 All rights reserved || Made with ❤️ by Rishi Raj 
           </div>
         </div>
       </section>
