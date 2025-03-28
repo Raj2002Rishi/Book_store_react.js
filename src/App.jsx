@@ -36,7 +36,7 @@ const App = () => {
       <Banner />
       {/* <CoverBanner /> */}
       <AppStore />
-      {/* <PdfReader /> */}
+      {/* <PdfReader file /> */}
       <Books />
       <Testimonial />
       <Footer />
