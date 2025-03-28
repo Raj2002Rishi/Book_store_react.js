@@ -1,3 +1,4 @@
+//postcc.config 
 export default {
   plugins: {
     tailwindcss: {},
